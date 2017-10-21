@@ -2,22 +2,22 @@ node {
     def app
 
     stage('Clone repository') {
-    sh 'echo "Tests passed 1"'
+    sh 'pwd'
+    sh 'echo "Source code can be pulled from github"'
     }
 
     stage('Build image') {
-
-        sh 'echo "Tests passed 2"'
+        
+        sh 'ls -l'
+        sh 'echo "Docker build images "'
     }
 
     stage('Test image') {
-
-        app.inside {
-            sh 'echo "Tests passed 3"'
-        }
+            sh 'hostname'
+            sh 'echo "Tests passed "'
     }
 
     stage('Push image') {
-            sh 'echo "Tests passed 4"'
+            sh 'echo "Build pushed to dockerhub"'
     }
 }
