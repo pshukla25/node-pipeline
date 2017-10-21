@@ -3,8 +3,8 @@ node {
 
     stage('Clone repository') {
 
-        checkout scm
-    # git url: 'https://github.com/pshukla25/node-pipeline.git'
+    #    checkout scm
+    git url: 'https://github.com/pshukla25/node-pipeline.git'
     }
 
     stage('Build image') {
