@@ -4,11 +4,12 @@ node {
     stage('Clone repository') {
 
         checkout scm
+    # git url: 'https://github.com/pshukla25/node-pipeline.git'
     }
 
     stage('Build image') {
 
-        app = docker.build("getintodevops/hellonode")
+        app = docker.build("pshukla25/node-pipeline")
     }
 
     stage('Test image') {
